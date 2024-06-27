@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aux ventres ronds</title>
+  </head>
+  <body class="bg-[#F2E5D3] lg:text-lg">
+    <header
+      class="grid bg-[url('../Media/bg-header2.jpg')] bg-no-repeat bg-cover h-[50vh] relative"
+    >
+      <nav
+        class="flex flex-col justify-around bg-[#F2E5D3] opacity-85 h-[8vh] fixed w-full z-30"
+      >
+        <div class="flex justify-around items-center">
+          <a href="./index.html" class="text-lg md:text-xl lg:text-2xl xl:text-4xl">Aux ventres ronds</a>
+          <a href="./index.html"><i class="fa-solid fa-house text-2xl"></i></a>
+          <div class="text-center hover:cursor-pointer" id="favorites">
+            <i class="fa-solid fa-bookmark text-[#E76F51] text-2xl"></i>
+            <p>FAVORIS</p>
+          </div>
+          <form id="search-bar" class="bg-white rounded-lg shadow-[0.1rem_0.1rem_0.3rem_grey]">
+            <input
+              type="search"
+              placeholder="Rechercher"
+              id="search"
+              class="py-2 pl-4 rounded-lg outline-none w-[5rem] md:w-[10rem] lg:w-[20rem] xl:w-[30rem]"
+            />
+            <button type="submit">
+              <i
+                class="fa-solid fa-magnifying-glass bg-black text-slate-200 p-2 rounded-r-lg text-xl"
+              ></i>
+            </button>
+          </form>
+          <button
+            class="text-white bg-black px-6 py-2 rounded-full shadow-[0.1rem_0.1rem_0.3rem_grey]"
+            id="connect"
+          >
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </nav>
+      <div
+        class="z-20  bg-slate-200 opacity-85 w-fit rounded-lg mx-auto self-end translate-y-[50%] sticky top-[10vh] flex flex-row justify-center text-center font-[600] shadow-[0.1rem_0.1rem_0.3rem_grey] hover:opacity-90"
+      >
+        <div
+          id="filter-all"
+          class="py-2 cursor-pointer w-[8rem] transform ease-in-out delay-50 duration-500 hover:bg-slate-900 hover:text-[#F2E5D3] hover:rounded-l-lg"
+        >
+          <p>ALL</p>
+          <p>RECETTES</p>
+          <p id="total-recipes"></p>
+        </div>
+        <div
+          id="filter-veg"
+          class="w-[8rem] py-2 group cursor-pointer transform ease-in-out delay-50 duration-500 hover:bg-[#6F927F] hover:text-[#F2E5D3]"
+        >
+          <i class="fa-solid fa-leaf text-2xl"></i>
+          <p>VEGETARIEN</p>
+          <p id="veg-recipes"></p>
+        </div>
+        <div
+          id="filter-main-dishes"
+          class="w-[8rem] py-2 cursor-pointer transform ease-in-out delay-150 duration-500 hover:bg-[#B0522A] hover:text-[#F2E5D3]"
+        >
+          <i class="fa-solid fa-bowl-food text-2xl"></i>
+          <p>PLATS</p>
+          <p id="main-dishes-recipes"></p>
+        </div>
+        <div
+          id="filter-desserts"
+          class="w-[8rem] py-2 cursor-pointer transform ease-in-out delay-150 duration-500 hover:bg-[#A96255] hover:text-[#F2E5D3]"
+        >
+          <i class="fa-solid fa-cheese text-2xl"></i>
+          <p>DESSERTS</p>
+          <p id="desserts-recipes"></p>
+        </div>
+        <div
+          id="filter-drinks"
+          class="w-[8rem] py-2 cursor-pointer transform ease-in-out delay-150 duration-500 hover:bg-[#E07D45] hover:text-[#F2E5D3] hover:rounded-r-lg"
+        >
+          <i class="fa-solid fa-whiskey-glass text-2xl"></i>
+          <p>BOISSONS</p>
+          <p id="drinks-recipes"></p>
+        </div>
+      </div>
+    </header>
+    <main class="py-20 z-10 min-h-[30vh]">
+      <button
+        id="add-recipe"
+        class="text-white bg-black w-[20%] px-2 py-2 mt-12 mb-20 rounded-full mx-auto block shadow-[0.1rem_0.1rem_0.3rem_grey]"
+      >
+        Ajouter une recette
+      </button>
+      <ul
+        id="recipes-list"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-center justify-items-center w-3/4 mx-auto gap-16"
+      ></ul>
+    </main>
+    <footer class="bg-black text-[#F2E5D3] flex justify-center items-center h-[10vh] mt-[10vh]">
+      <p class="">Merci à Xallishow et à Carambaree pour leur aide concernant le choix de la palette de couleurs !</p>
+    </footer>
+    <script src="../JS/recipes.js"></script>
+    <script src="../JS/icons.js"></script>
+    <script src="../JS/log.js"></script>
+    <script src="../JS/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Aux ventres ronds</title>
+  </head>
+  <body class="bg-[#F2E5D3] lg:text-lg">
+    <header
+      class="grid bg-[url('../Media/bg-header2.jpg')] bg-no-repeat bg-cover h-[50vh] relative"
+    >
+      <nav
+        class="flex flex-col justify-around bg-[#F2E5D3] opacity-85 h-[8vh] fixed w-full"
+      >
+        <div class="flex justify-around items-center">
+          <a href="./index.html" class="text-4xl">Aux ventres ronds</a>
+          <a href="./index.html"><i class="fa-solid fa-house text-2xl"></i></a>
+          <div
+            class="text-center hover:cursor-pointer invisible"
+            id="favorites"
+          >
+            <i class="fa-solid fa-star text-[#E76F51] text-2xl"></i>
+            <p>FAVORIS</p>
+          </div>
+          <form
+            id="search-bar"
+            class="bg-white rounded-lg shadow-[0.1rem_0.1rem_0.3rem_grey] invisible"
+          >
+            <input
+              type="search"
+              placeholder="Rechercher"
+              id="search"
+              class="py-2 pl-4 rounded-lg outline-none w-[30rem]"
+            />
+            <button type="submit">
+              <i
+                class="fa-solid fa-magnifying-glass bg-black text-slate-200 p-2 rounded-r-lg text-xl"
+              ></i>
+            </button>
+          </form>
+          <button
+            class="text-white bg-black px-6 py-2 rounded-full shadow-[0.1rem_0.1rem_0.3rem_grey]"
+            id="connect"
+          >
+            <i class="fa-solid fa-user"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
+    <main class="my-8 mx-8">
+      <form action="#" class="space-y-12 w-[40rem] mx-auto" id="form-recipe">
+        <section class="space-y-4">
+          <div class="w-fit mx-auto">
+            <label for="title" class="font-bold text-xl">Titre :</label>
+            <input type="text" id="title" name="title" class="rounded-lg px-2 w-[20rem]" />
+          </div>
+          <div class="w-fit mx-auto">
+            <label for="url">URL de la photo :</label>
+            <input type="url" id="url" name="url" class="rounded-lg px-2 w-[25rem]"/>
+          </div>
+          <div class="mx-auto w-fit">
+            <label for="category">Catégorie :</label>
+            <select name="category" id="category" class="rounded-lg px-2">
+              <option value="entries">Entrée</option>
+              <option value="main-dishes">Plat principal</option>
+              <option value="desserts">Dessert</option>
+              <option value="drinks">Boisson</option>
+            </select>
+          </div>
+        </section>
+        <section>
+          <div class="space-y-2">
+            <h2 class="text-xl font-bold">Ingrédients :</h2>
+            <div class="flex justify-between">
+              <label for="number-of-persons">Pour combien de personnes :</label>
+              <input type="number" id="number-of-persons"
+              name="number-of-persons" class="rounded-lg px-2 focus:value=''"
+              min="0" value="0">
+            </div>
+            <button
+              type="button"
+              class="text-white bg-black px-6 py-2 rounded-full shadow-[0.1rem_0.1rem_0.3rem_grey] block mx-auto"
+              id="add-ingredient"
+            >
+              Ajouter un ingrédient
+            </button>
+          </div>
+          <ul id="ingredients-list" class="space-y-2 mt-2"></ul>
+        </section>
+        <section class="space-y-2">
+          <h2 class="text-xl font-bold">Préparation</h2>
+          <div class="flex justify-between">
+            <label for="prep-timing">Durée de la préparation :</label>
+            <div>
+              <input
+                type="number"
+                min="0"
+                class="rounded-lg px-2"
+                id="prep-timing"
+                name="prep-timing"
+                value="0"
+              />
+              <select name="prep-timing-unit" id="prep-timing-unit" class="rounded-lg px-2">
+                <option value="min">min</option>
+                <option value="h">h</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <label for="rest-timing">Durée de repos :</label>
+            <div>
+              <input
+                type="number"
+                min="0"
+                class="rounded-lg px-2"
+                id="rest-timing"
+                name="rest-timing"
+                value="0"
+              />
+              <select name="rest-timing-unit" id="rest-timing-unit" class="rounded-lg px-2">
+                <option value="min">min</option>
+                <option value="h">h</option>
+              </select>
+            </div>
+          </div>
+          <div class="flex justify-between">
+            <label for="cook-timing">Durée de la cuisson :</label>
+            <div>
+              <input
+                type="number"
+                min="0"
+                class="rounded-lg px-2"
+                id="cook-timing"
+                name="cook-timing"
+                value="0"
+              />
+              <select name="cook-timing-unit" id="cook-timing-unit" class="rounded-lg px-2">
+                <option value="min">min</option>
+                <option value="h">h</option>
+              </select>
+            </div>
+          </div>
+        </section>
+        <section class="space-y-2">
+          <h2 class="text-xl font-bold space-y-2">Étapes</h2>
+          <button
+            type="button"
+            class="text-white bg-black px-6 py-2 rounded-full shadow-[0.1rem_0.1rem_0.3rem_grey] block mx-auto"
+            id="add-step"
+          >
+            Ajouter une étape
+          </button>
+          <ul id="step-list"></ul>
+        </section>
+        <input
+          type="submit"
+          value="Enregistrer la recette"
+          id="submit-button"
+          class="text-white bg-black px-6 py-2 rounded-full shadow-[0.1rem_0.1rem_0.3rem_grey] block mx-auto hover:cursor-pointer"
+        />
+      </form>
+    </main>
+    <footer class="bg-black text-[#F2E5D3] flex justify-center items-center h-[10vh] mt-[10vh]">
+      <p class="">Merci à Xallishow et à Carambaree pour leur aide concernant le choix de la palette de couleurs !</p>
+    </footer>
+    <script src="../JS/log.js"></script>
+    <script src="../JS/edit.js"></script>
+  </body>
+</html>
