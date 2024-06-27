@@ -85,7 +85,7 @@ const unlog = () => {
       .querySelectorAll("[data-type='admin-buttons']")
       .forEach((recipe) => recipe.classList.add("hidden"));
     sessionStorage.setItem("logged", JSON.stringify(false));
-    window.location.replace("../HTML/index.html");
+    window.location.replace("./HTML/index.html");
   });
   const cancelButton = document.createElement("button");
   cancelButton.classList =
