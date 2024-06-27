@@ -79,7 +79,7 @@ const categoryIcon = (document,element, recipe, size) => {
       if (document.getElementById("general-header")) {
         document
           .getElementById("general-header")
-          .classList.add("bg-[url('../Media/veg.jpg')]");
+          .classList.add("bg-[url('./Media/veg.jpg')]");
       }
       break;
     case "main-dishes":
@@ -89,7 +89,7 @@ const categoryIcon = (document,element, recipe, size) => {
         .getElementById("general-header")){
         document
         .getElementById("general-header")
-        .classList.add("bg-[url('../Media/maindish.jpg')]");
+        .classList.add("bg-[url('./Media/maindish.jpg')]");
       }
       break;
     case "desserts":
@@ -99,7 +99,7 @@ const categoryIcon = (document,element, recipe, size) => {
         .getElementById("general-header")) {
         document
         .getElementById("general-header")
-        .classList.add("bg-[url('../Media/desserts.jpg')]");
+        .classList.add("bg-[url('./Media/desserts.jpg')]");
       }
       break;
     case "drinks":
@@ -109,7 +109,7 @@ const categoryIcon = (document,element, recipe, size) => {
         .getElementById("general-header")) {
         document
         .getElementById("general-header")
-        .classList.add("bg-[url('../Media/drinks.jpg')]");
+        .classList.add("bg-[url('./Media/drinks.jpg')]");
       }
       break;
   }
